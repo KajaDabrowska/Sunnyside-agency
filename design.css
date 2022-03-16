@@ -1,0 +1,168 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft red: hsl(7, 99%, 70%)
+- Yellow: hsl(51, 100%, 49%)
+- Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
+- Dark blue (photography text): hsl(198, 62%, 26%)
+- Dark moderate cyan (footer): hsl(168, 34%, 41%)
+
+### Neutral
+
+- Very dark desaturated blue: hsl(212, 27%, 19%)
+- Very dark grayish blue: hsl(213, 9%, 39%)
+- Dark grayish blue: hsl(232, 10%, 55%)
+- Grayish blue: hsl(210, 4%, 67%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+- Font size: 18px
+
+### Font
+
+- Family: [Barlow](https://fonts.google.com/specimen/Barlow)
+- Weights: 600
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700, 900 
+*/
+
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+  /* colors */
+  --clr-dark: 230, 35%, 7%;
+  --clr-light: 231, 77%, 90%;
+  --clr-white: 0, 0%, 100%;
+
+  /* font sizes */
+  /* --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1rem; */
+  --fs-500: 4rem;
+  --fs-400: 3.4rem;
+  --fs-300: 2.2rem;
+  --fs-200: 1.8rem;
+
+  /* font-families */
+  --ff-sans-serif: "Barlow", sans-serif;
+  --ff-serif: "Fraunces", serif;
+  /* font weight: 700, 900 */
+
+  /* --flow-space: 1rem; */
+}
+
+/* --------------------- */
+/*          Reset        */
+/* --------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 600;
+}
+
+/* set up the body */
+body {
+  font-family: var(--ff-sans-serif);
+  font-size: var(--fs-200);
+
+  color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-white));
+
+  line-height: 1.5;
+  min-height: 100vh;
+
+  /* display: grid;
+  grid-template-rows: min-content 1fr; */
+
+  overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  /* display: block; */
+}
+
+/* make forms elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------ */
+/*      typography    */
+/* ------------------ */
+
+html {
+  font-size: 62.5%;
+}
+
+.ff-sans-serif {
+  font-family: var(--ff-sans-serif);
+}
+
+.ff-serif {
+  font-family: var(--ff-serif);
+  font-weight: 700;
+  /* font-weight: 900;  for h1*/
+}
