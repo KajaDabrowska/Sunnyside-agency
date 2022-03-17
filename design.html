@@ -18,6 +18,270 @@
     <title>DESIGN FILE</title>
   </head>
   <body>
-    <h1 class="ff-serif">H1 Heading</h1>
+    <!--TODO HERE PUT SKIP TO CONTENT -->
+
+    <header class="bg-blue">
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="./images/logo.svg" alt="sunnyside site logo" />
+      </div>
+
+      <!-- NAVIGATION -->
+      <nav>
+        <ul class="flex">
+          <li>
+            <a href="#" class="text-white fs-200">About</a>
+          </li>
+          <li>
+            <a href="#" class="text-white fs-200">Services</a>
+          </li>
+          <li>
+            <a href="#" class="text-white fs-200">Projects</a>
+          </li>
+          <!--TODO special button -->
+          <li>
+            <a href="#" class="text-white fs-200">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <h1 class="ff-serif fs-500 text-white letter-spacing-1 uppercase">
+        We are creatives
+      </h1>
+    </header>
+
+    <!--      -->
+    <!-- MAIN -->
+    <!--      -->
+    <main id="main">
+      <div class="container-chess">
+        <!-- FIRST PAIR -->
+        <div class="box">
+          <h2 class="ff-serif">Transform your brand</h2>
+          <p>
+            We are a full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do
+            most of the marketing for you.
+          </p>
+          <a href="#" class="underline-link ff-serif"
+            >Learn more
+            <span class="sr-only"> about how we can transform your brand</span>
+          </a>
+        </div>
+        <div class="box">
+          <picture>
+            <source
+              srcset="./images/mobile/image-transform.jpg"
+              media="(max-width: 89.999em)"
+            />
+            <source
+              srcset="./images/desktop/image-transform.jpg"
+              media="(min-width: 90em)"
+            />
+            <!-- Decorative images: Provide a null text alternative (alt="") when the only purpose of an image is to add visual decoration to the page, rather than to convey information that is important to understanding the page. -->
+            <img src="./images/mobile/image-transform.jpg" alt="" />
+          </picture>
+        </div>
+
+        <!-- SECOND PAIR -->
+        <div class="box">
+          <h2 class="ff-serif">Stand out to the right audience</h2>
+          <p>
+            Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we’ll build and
+            extend your brand in digital places.
+          </p>
+          <a href="#" class="underline-link ff-serif"
+            >Learn more
+            <span class="sr-only"> about how we can transform your brand</span>
+          </a>
+        </div>
+        <div class="box">
+          <picture>
+            <source
+              srcset="./images/mobile/image-stand-out.jpg"
+              media="(max-width: 89.999em)"
+            />
+            <source
+              srcset="./images/desktop/image-stand-out.jpg"
+              media="(min-width: 90em)"
+            />
+            <img src="./images/mobile/image-stand-out.jpg" alt="" />
+          </picture>
+        </div>
+      </div>
+    </main>
+
+    <article>
+      <!-- THIRD PAIR -->
+      <div class="box">
+        <h2 class="ff-serif">Graphic Design</h2>
+        <p>
+          Great design makes you memorable. We deliver artwork that underscores
+          your brand message and captures potential clients’ attention.
+        </p>
+      </div>
+      <div class="box">
+        <h2 class="ff-serif">Photography</h2>
+        <p>
+          Increase your credibility by getting the most stunning, high-quality
+          photos that improve your business image.
+        </p>
+      </div>
+    </article>
+
+    <article>
+      <h2 class="ff-serif letter-spacing-1 uppercase">Client testimonials</h2>
+      <div>
+        <img
+          class="client__image"
+          src="./images/image-emily.jpg"
+          alt="happy client"
+        />
+        <p>
+          We put our trust in Sunnyside and they delivered, making sure our
+          needs were met and deadlines were always hit.
+        </p>
+        <div class="client__info">
+          <p>Emily R.</p>
+          <p>Marketing Director</p>
+        </div>
+      </div>
+
+      <div>
+        <img
+          class="client__image"
+          src="./images/image-thomas.jpg"
+          alt="happy client"
+        />
+        <p>
+          Sunnyside’s enthusiasm coupled with their keen interest in our brand’s
+          success made it a satisfying and enjoyable experience.
+        </p>
+        <div class="client__info">
+          <p>Thomas S.</p>
+          <p>Chief Operating Officer</p>
+        </div>
+      </div>
+
+      <div>
+        <img
+          class="client__image"
+          src="./images/image-jennie.jpg"
+          alt="happy client"
+        />
+        <p>
+          Incredible end result! Our sales increased over 400% when we worked
+          with Sunnyside. Highly recommended!
+        </p>
+        <div class="client__info">
+          <p>Jennie F.</p>
+          <p>Business Owner</p>
+        </div>
+      </div>
+    </article>
+
+    <!--               -->
+    <!-- IMAGE GALLERY -->
+    <!--TODO label          -->
+    <section>
+      <!-- first pic -->
+      <picture>
+        <source
+          srcset="./images/mobile/image-gallery-milkbottles.jpg"
+          media="(max-width: 89.999em)"
+        />
+        <source
+          srcset="./images/desktop/image-gallery-milkbottles.jpg"
+          media="(min-width: 90em)"
+        />
+        <img src="./images/mobile/image-gallery-milkbottles.jpg" alt="" />
+      </picture>
+      <!-- second pic -->
+      <picture>
+        <source
+          srcset="./images/mobile/image-gallery-orange.jpg"
+          media="(max-width: 89.999em)"
+        />
+        <source
+          srcset="./images/desktop/image-gallery-orange.jpg"
+          media="(min-width: 90em)"
+        />
+        <img src="./images/mobile/image-gallery-orange.jpg" alt="" />
+      </picture>
+      <!-- third pic -->
+      <picture>
+        <source
+          srcset="./images/mobile/image-gallery-cone.jpg"
+          media="(max-width: 89.999em)"
+        />
+        <source
+          srcset="./images/desktop/image-gallery-cone.jpg"
+          media="(min-width: 90em)"
+        />
+        <img src="./images/mobile/image-gallery-cone.jpg" alt="" />
+      </picture>
+      <!-- forth pic -->
+      <picture>
+        <source
+          srcset="./images/mobile/image-gallery-sugar-cubes.jpg"
+          media="(max-width: 89.999em)"
+        />
+        <source
+          srcset="./images/desktop/image-gallery-sugar-cubes.jpg"
+          media="(min-width: 90em)"
+        />
+        <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="" />
+      </picture>
+    </section>
+
+    <!--         -->
+    <!-- FOOTER  -->
+    <!--         -->
+    <footer class="bg-green">
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="./images/logo.svg" alt="sunnyside site logo" />
+      </div>
+
+      <!-- footer NAVIGATION -->
+      <nav>
+        <ul class="flex">
+          <li>
+            <a href="#" class="fs-200">About</a>
+          </li>
+          <li>
+            <a href="#" class="fs-200">Services</a>
+          </li>
+          <li>
+            <a href="#" class="fs-200">Projects</a>
+          </li>
+        </ul>
+
+        <!-- SOCIAL MEDIA -->
+        <ul class="flex">
+          <li>
+            <a href="#">
+              <img src="./images/icon-facebook.svg" alt="Facebook icon link" />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/icon-instagram.svg" alt="instagram icon link"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/icon-twitter.svg" alt="twitter icon link"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/icon-pinterest.svg" alt="pinterest icon link"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>

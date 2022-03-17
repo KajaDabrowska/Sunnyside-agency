@@ -49,6 +49,14 @@ The designs were created to the following widths:
   --clr-light: 231, 77%, 90%;
   --clr-white: 0, 0%, 100%;
 
+  --clr-blue-main: 200, 100%, 62%;
+  --clr-yellow-main: 50, 100%, 51%;
+  --clr-pink-main: 6, 99%, 72%;
+  --clr-green-main: 165, 48%, 75%;
+
+  --clr-dark-blue: 198, 62%, 26%;
+  --clr-dark-green: 167, 40%, 24%;
+
   /* font sizes */
   /* --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
   --fs-800: 3.5rem;
@@ -101,6 +109,16 @@ p {
   font-weight: 600;
 }
 
+a {
+  color: hsl(var(--clr-dark));
+  text-decoration: none;
+  /* background-color: transparent; */
+}
+
+ul {
+  list-style: none;
+}
+
 /* set up the body */
 body {
   font-family: var(--ff-sans-serif);
@@ -149,6 +167,59 @@ select {
   }
 }
 
+/* --------------------- */
+/*Utility classes        */
+/* --------------------- */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.d-block {
+  display: block;
+}
+
+/* .container {
+} */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+/* ------------------ */
+/*      colors        */
+/* ------------------ */
+
+.bg-blue {
+  background-color: hsl(var(--clr-blue-main));
+}
+.bg-green {
+  background-color: hsl(var(--clr-green-main));
+}
+.bg-yellow {
+  background-color: hsl(var(--clr-yellow-main));
+}
+.bg-pink {
+  background-color: hsl(var(--clr-pink-main));
+}
+
+.text-white {
+  color: hsl(var(--clr-white));
+}
+
 /* ------------------ */
 /*      typography    */
 /* ------------------ */
@@ -159,10 +230,65 @@ html {
 
 .ff-sans-serif {
   font-family: var(--ff-sans-serif);
+  font-weight: 600;
 }
 
 .ff-serif {
   font-family: var(--ff-serif);
-  font-weight: 700;
-  /* font-weight: 900;  for h1*/
+  /* font-weight: 700; */
+  font-weight: 900;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.tx-nowrap {
+  white-space: nowrap;
+}
+
+/* --------------- */
+/*  Components     */
+/* --------------- */
+.underline-link {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.underline-link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 1rem;
+  width: 105%;
+  border-radius: 10px;
+  background-color: var(--color, red);
+  opacity: 0.2;
+  bottom: -5%;
+  /* transform: translateY(300%); */
 }
