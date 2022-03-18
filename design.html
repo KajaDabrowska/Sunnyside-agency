@@ -22,13 +22,24 @@
 
     <header class="bg-blue">
       <!-- LOGO -->
-      <div class="logo">
-        <img src="./images/logo.svg" alt="sunnyside site logo" />
+      <div class="flex container p-top-m just-spbt">
+        <div class="logo">
+          <img src="./images/logo.svg" alt="sunnyside site logo" />
+        </div>
+
+        <!-- MENU HAMBURGER -->
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+          <span class="sr-only" aria-expanded="false">Menu</span>
+        </button>
       </div>
 
       <!-- NAVIGATION -->
       <nav>
-        <ul class="flex">
+        <ul
+          class="flex primary-navigation"
+          data-visible="false"
+          id="primary-navigation"
+        >
           <li>
             <a href="#" class="text-white fs-200">About</a>
           </li>
@@ -44,16 +55,21 @@
           </li>
         </ul>
       </nav>
-
-      <h1 class="ff-serif fs-500 text-white letter-spacing-1 uppercase">
-        We are creatives
-      </h1>
     </header>
 
     <!--      -->
     <!-- MAIN -->
     <!--      -->
     <main id="main">
+      <div class="bg-blue banner">
+        <h1 class="ff-serif fs-500 text-white letter-spacing-1 uppercase">
+          We are creatives
+        </h1>
+
+        <div>
+          <img src="./images/icon-arrow-down.svg" alt="" />
+        </div>
+      </div>
       <div class="container-chess">
         <!-- FIRST PAIR -->
         <div class="box">
