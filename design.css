@@ -63,7 +63,7 @@ The designs were created to the following widths:
   --fs-700: 1.5rem;
   --fs-600: 1rem; */
   --fs-500: 4rem;
-  --fs-400: 3.4rem;
+  --fs-400: 3.2rem;
   --fs-300: 2.2rem;
   --fs-200: 1.8rem;
 
@@ -177,8 +177,25 @@ select {
   gap: var(--gap, 1rem);
 }
 
+.order--1 {
+  order: 1;
+}
+.order--2 {
+  order: 2;
+}
+.order--3 {
+  order: 3;
+}
+.order--4 {
+  order: 4;
+}
+
 .just-spbt {
   justify-content: space-between;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .grid {
@@ -192,7 +209,12 @@ select {
 
 /*TODO not used actually*/
 .container {
-  padding-inline: 2rem;
+  padding: 6rem 2rem;
+}
+
+.flow > *:where(:not(:last-child)) {
+  margin-bottom: 3rem;
+  /* outline: 1px solid red; */
 }
 
 .p-top-sm {
@@ -233,6 +255,18 @@ select {
 
 .text-white {
   color: hsl(var(--clr-white));
+}
+
+.text-gray {
+  color: hsl(var(--clr-dark), 0.6);
+}
+
+.text-green-dark {
+  color: hsl(var(--clr-dark-green));
+}
+
+.text-blue-dark {
+  color: hsl(var(--clr-dark-blue));
 }
 
 /* ------------------ */
@@ -304,10 +338,18 @@ html {
   height: 1rem;
   width: 105%;
   border-radius: 10px;
-  background-color: var(--color, red);
-  opacity: 0.2;
+  background-color: var(--underline-color, red);
+  opacity: 0.3;
   bottom: -5%;
   /* transform: translateY(300%); */
+}
+
+.underline-link--yellow {
+  --underline-color: hsl(var(--clr-yellow-main));
+}
+
+.underline-link--pink {
+  --underline-color: hsl(var(--clr-pink-main));
 }
 
 /* NAVIGATION */
@@ -353,3 +395,36 @@ html {
 /* .banner__arrow {
   height: ;
 } */
+
+.container-chess {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-chess > * {
+  width: 100%;
+}
+
+/* .article-about > * {
+  min-height: 100vh;
+} */
+
+.des-box {
+  height: 90vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.graphic-des-box {
+  background-image: url(./images/mobile/image-graphic-design.jpg);
+
+  /* background-position: top center; */
+}
+
+.photography-des-box {
+  background-image: url(./images/mobile/image-photography.jpg);
+}
