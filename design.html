@@ -22,7 +22,7 @@
 
     <header class="bg-blue">
       <!-- LOGO -->
-      <div class="flex container p-top-m just-spbt">
+      <div class="flex flex-row container p-top-m just-spbt">
         <div class="logo">
           <img src="./images/logo.svg" alt="sunnyside site logo" />
         </div>
@@ -72,7 +72,8 @@
       </div>
       <div class="container-chess">
         <!-- FIRST PAIR -->
-        <div class="box container flow order--2">
+        <!--TODO tex-max-width -->
+        <div class="box container flow order--2 text-max-width">
           <h2 class="ff-serif fs-400">Transform your brand</h2>
           <p class="text-gray">
             We are a full-service creative agency specializing in helping brands
@@ -132,7 +133,7 @@
       </div>
     </main>
 
-    <article class="article-about">
+    <article class="article-about" id="article-about">
       <!-- THIRD PAIR -->
       <div class="des-box graphic-des-box">
         <div class="box container flow">
@@ -156,55 +157,58 @@
       </div>
     </article>
 
-    <article>
-      <h2 class="ff-serif fs-400 letter-spacing-1 uppercase">
+    <article
+      id="client-testimonials"
+      class="flex client-testimonials-flex container"
+    >
+      <h2 class="ff-serif fs-200 letter-spacing-1 text-gray--light uppercase">
         Client testimonials
       </h2>
-      <div>
+      <div class="flow flow--sm">
         <img
           class="client__image"
           src="./images/image-emily.jpg"
           alt="happy client"
         />
-        <p>
+        <p class="text-gray">
           We put our trust in Sunnyside and they delivered, making sure our
           needs were met and deadlines were always hit.
         </p>
         <div class="client__info">
-          <p>Emily R.</p>
-          <p>Marketing Director</p>
+          <p class="ff-serif">Emily R.</p>
+          <p class="text-gray--light">Marketing Director</p>
         </div>
       </div>
 
-      <div>
+      <div class="flow flow--sm">
         <img
           class="client__image"
           src="./images/image-thomas.jpg"
           alt="happy client"
         />
-        <p>
+        <p class="text-gray">
           Sunnyside’s enthusiasm coupled with their keen interest in our brand’s
           success made it a satisfying and enjoyable experience.
         </p>
         <div class="client__info">
-          <p>Thomas S.</p>
-          <p>Chief Operating Officer</p>
+          <p class="ff-serif">Thomas S.</p>
+          <p class="text-gray--light">Chief Operating Officer</p>
         </div>
       </div>
 
-      <div>
+      <div class="flow flow--sm">
         <img
           class="client__image"
           src="./images/image-jennie.jpg"
           alt="happy client"
         />
-        <p>
+        <p class="text-gray">
           Incredible end result! Our sales increased over 400% when we worked
           with Sunnyside. Highly recommended!
         </p>
         <div class="client__info">
-          <p>Jennie F.</p>
-          <p>Business Owner</p>
+          <p class="ff-serif">Jennie F.</p>
+          <p class="text-gray--light">Business Owner</p>
         </div>
       </div>
     </article>
@@ -212,7 +216,7 @@
     <!--               -->
     <!-- IMAGE GALLERY -->
     <!--TODO label          -->
-    <section>
+    <section id="image-gallery" class="image-gallery">
       <!-- first pic -->
       <picture>
         <source
@@ -266,28 +270,32 @@
     <!--         -->
     <!-- FOOTER  -->
     <!--         -->
-    <footer class="bg-green">
+    <footer class="bg-green container flow" id="footer-nav">
       <!-- LOGO -->
       <div class="logo">
-        <img src="./images/logo.svg" alt="sunnyside site logo" />
+        <img
+          src="./images/logo.svg"
+          alt="sunnyside site logo"
+          class="svg-green-filter"
+        />
       </div>
 
       <!-- footer NAVIGATION -->
-      <nav>
-        <ul class="flex">
+      <nav class="flow">
+        <ul class="flex flex-row just-spev">
           <li>
-            <a href="#" class="fs-200">About</a>
+            <a href="#" class="fs-200 text-green-med">About</a>
           </li>
           <li>
-            <a href="#" class="fs-200">Services</a>
+            <a href="#" class="fs-200 text-green-med">Services</a>
           </li>
           <li>
-            <a href="#" class="fs-200">Projects</a>
+            <a href="#" class="fs-200 text-green-med">Projects</a>
           </li>
         </ul>
 
         <!-- SOCIAL MEDIA -->
-        <ul class="flex">
+        <ul class="flex flex-row just-cen flex-gap--m p-top-b">
           <li>
             <a href="#">
               <img src="./images/icon-facebook.svg" alt="Facebook icon link" />
