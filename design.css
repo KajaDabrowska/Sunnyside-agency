@@ -248,6 +248,9 @@ select {
 .flow--sm {
   --flow-gap: 2rem;
 }
+.flow--m {
+  --flow-gap: 3.5rem;
+}
 .flow--big {
   --flow-gap: 5rem;
 }
@@ -279,6 +282,10 @@ select {
 /*      colors        */
 /* ------------------ */
 
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+
 .bg-blue {
   background-color: hsl(var(--clr-blue-main));
 }
@@ -298,6 +305,10 @@ select {
 
 .text-gray {
   color: hsl(var(--clr-dark), 0.7);
+}
+
+.text-gray--med {
+  color: hsl(var(--clr-dark), 0.5);
 }
 
 .text-gray--light {
@@ -405,35 +416,94 @@ html {
   --underline-color: hsl(var(--clr-pink-main));
 }
 
+.btn-primary {
+  display: inline-block;
+  background-color: hsl(var(--clr-yellow-main));
+  font-weight: 700;
+  border-radius: 10rem;
+  padding: 1.5rem 3rem;
+}
+
+/*TODO hover states  */
 /* NAVIGATION */
 .primary-navigation {
   position: fixed;
+  z-index: 1000;
+  margin: 0rem auto;
+  left: 50%;
+
+  width: 85vw;
   transform: translateX(110%);
-  display: none;
+  transition: transform 0.6s ease-in-out;
   /* height: 0;
   width: 0; */
+
+  --flow-gap: 1.5rem;
+  padding: 3rem 6rem;
+}
+
+.nav-deco {
+  position: relative;
+  display: inline;
+  background-color: transparent;
+  transform: translateX(310%);
+  transition: transform 0.6s ease-in-out;
+}
+
+/*TODO change on mozzila cuz it broke */
+.nav-deco::before {
+  content: "";
+  position: fixed;
+  z-index: 1001;
+  display: inline;
+
+  top: 8.25rem;
+  right: 7.5%;
+
+  height: 3rem;
+  width: 2rem;
+  /* top: -2.9rem;
+  right: 7.5%; */
+  background-color: hsl(var(--clr-white));
+  background-color: transparent;
+  border-style: solid;
+  border-width: 0 0 2rem 2rem;
+  border-color: transparent transparent hsl(var(--clr-white)) transparent;
 }
 
 /* nav {
   display: none;
 } */
 
+/*TODO fix  */
 .primary-navigation[data-visible="true"] {
   transform: translateX(0);
+  transform: translateX(-50%);
+  display: inline-block;
+}
+
+.nav-deco[data-visible="true"] {
+  transform: translateX(0%);
 }
 
 .mobile-nav-toggle {
   display: none;
-  /* aspect-ratio: 1; */
-  width: 2rem;
-  height: 1.8rem;
+  width: 2.4rem;
+  height: 2rem;
   background-image: url(./images/icon-hamburger.svg);
+  background-size: cover;
   background-color: transparent;
   border: none;
 }
 
 @media (max-width: 89.999em) {
   .mobile-nav-toggle {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 90em) {
+  .primary-navigation {
     display: inline-block;
   }
 }
@@ -520,3 +590,5 @@ html {
   filter: brightness(0) saturate(100%) invert(48%) sepia(56%) saturate(305%)
     hue-rotate(118deg) brightness(72%) contrast(94%);
 }
+
+/*TODO make the images center center? */

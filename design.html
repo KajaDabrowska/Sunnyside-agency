@@ -13,13 +13,17 @@
       rel="stylesheet"
     />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="design.css" />
+
+    <!-- JS -->
+    <script defer src="./script.js"></script>
 
     <title>DESIGN FILE</title>
   </head>
   <body>
     <!--TODO HERE PUT SKIP TO CONTENT -->
-
+    <!-- <div class="nav-deco"></div> -->
     <header class="bg-blue">
       <!-- LOGO -->
       <div class="flex flex-row container p-top-m just-spbt">
@@ -29,29 +33,34 @@
 
         <!-- MENU HAMBURGER -->
         <button class="mobile-nav-toggle" aria-controls="primary-navigation">
-          <span class="sr-only" aria-expanded="false">Menu</span>
+          <span class="sr-only mobile-nav-toggle__span" aria-expanded="false"
+            >Menu</span
+          >
         </button>
       </div>
 
       <!-- NAVIGATION -->
       <nav>
+        <div class="nav-deco" data-visible="false"></div>
         <ul
-          class="flex primary-navigation"
+          class="flex primary-navigation flow bg-white"
           data-visible="false"
           id="primary-navigation"
         >
           <li>
-            <a href="#" class="text-white fs-200">About</a>
+            <a href="#" class="text-gray--med fs-200">About</a>
           </li>
           <li>
-            <a href="#" class="text-white fs-200">Services</a>
+            <a href="#" class="text-gray--med fs-200">Services</a>
           </li>
           <li>
-            <a href="#" class="text-white fs-200">Projects</a>
+            <a href="#" class="text-gray--med fs-200">Projects</a>
           </li>
           <!--TODO special button -->
           <li>
-            <a href="#" class="text-white fs-200">Contact</a>
+            <a href="#" class="text-gray fs-200 ff-serif uppercase btn-primary"
+              >Contact</a
+            >
           </li>
         </ul>
       </nav>
