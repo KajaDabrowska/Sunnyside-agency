@@ -2,15 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,45 +13,329 @@
       rel="stylesheet"
     />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="design.css" />
 
-    <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <!-- JS -->
+    <script defer src="./script.js"></script>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <title>DESIGN FILE</title>
   </head>
   <body>
-    About Services Projects Contact We are creatives Transform your brand We are
-    a full-service creative agency specializing in helping brands grow fast.
-    Engage your clients through compelling visuals that do most of the marketing
-    for you. Learn more Stand out to the right audience Using a collaborative
-    formula of designers, researchers, photographers, videographers, and
-    copywriters, we’ll build and extend your brand in digital places. Learn more
-    Graphic design Great design makes you memorable. We deliver artwork that
-    underscores your brand message and captures potential clients’ attention.
-    Photography Increase your credibility by getting the most stunning,
-    high-quality photos that improve your business image. Client testimonials We
-    put our trust in Sunnyside and they delivered, making sure our needs were
-    met and deadlines were always hit. Emily R. Marketing Director Sunnyside’s
-    enthusiasm coupled with their keen interest in our brand’s success made it a
-    satisfying and enjoyable experience. Thomas S. Chief Operating Officer
-    Incredible end result! Our sales increased over 400% when we worked with
-    Sunnyside. Highly recommended! Jennie F. Business Owner About Services
-    Projects Contact
+    <!--TODO HERE PUT SKIP TO CONTENT -->
+    <!-- <div class="nav-deco"></div> -->
+    <header class="bg-blue">
+      <!-- <div class="flex-media"> -->
+      <!-- LOGO -->
+      <div class="flex flex-row container p-top-m just-spbt">
+        <div class="logo">
+          <img src="./images/logo.svg" alt="sunnyside site logo" />
+        </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+        <!-- MENU HAMBURGER -->
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+          <span class="sr-only mobile-nav-toggle__span" aria-expanded="false"
+            >Menu</span
+          >
+        </button>
+
+        <!-- NAVIGATION -->
+        <nav>
+          <div class="nav-deco-control" data-visible="false">
+            <div class="nav-deco"></div>
+          </div>
+          <ul
+            class="primary-navigation bg-white flow"
+            data-visible="false"
+            id="primary-navigation"
+          >
+            <li>
+              <a href="#" class="text-gray--med fs-200">About</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray--med fs-200">Services</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray--med fs-200">Projects</a>
+            </li>
+            <!--TODO special button -->
+            <li>
+              <a
+                href="#"
+                class="text-gray fs-200 ff-serif uppercase btn-primary"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- </div> -->
+    </header>
+
+    <!--      -->
+    <!-- MAIN -->
+    <!--      -->
+    <main id="main">
+      <div class="bg-blue banner">
+        <h1 class="ff-serif fs-500 text-white letter-spacing-1 uppercase">
+          We are creatives
+        </h1>
+
+        <div>
+          <img src="./images/icon-arrow-down.svg" alt="" />
+        </div>
+      </div>
+      <div class="container-chess">
+        <!-- FIRST PAIR -->
+
+        <div class="box container flow order--2 flex-col-al-c">
+          <h2 class="ff-serif fs-400">Transform your brand</h2>
+          <p class="text-gray text-container">
+            We are a full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do
+            most of the marketing for you.
+          </p>
+          <a href="#" class="underline-link ff-serif underline-link--yellow"
+            >Learn more
+            <span class="sr-only"> about how we can transform your brand</span>
+          </a>
+        </div>
+
+        <div class="box order--1">
+          <picture>
+            <source
+              srcset="./images/mobile/image-transform.jpg"
+              media="(max-width: 89.999em)"
+            />
+            <source
+              srcset="./images/desktop/image-transform.jpg"
+              media="(min-width: 90em)"
+            />
+            <!-- Decorative images: Provide a null text alternative (alt="") when the only purpose of an image is to add visual decoration to the page, rather than to convey information that is important to understanding the page. -->
+            <img src="./images/mobile/image-transform.jpg" alt="" />
+          </picture>
+        </div>
+
+        <!-- SECOND PAIR -->
+        <div class="box container flow order--4 flex-col-al-c">
+          <h2 class="ff-serif fs-400">Stand out to the right audience</h2>
+          <p class="text-gray text-container">
+            Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we’ll build and
+            extend your brand in digital places.
+          </p>
+          <a href="#" class="underline-link underline-link--pink ff-serif"
+            >Learn more
+            <span class="sr-only"> about how we can transform your brand</span>
+          </a>
+        </div>
+        <div class="box order--3">
+          <picture>
+            <source
+              srcset="./images/mobile/image-stand-out.jpg"
+              media="(max-width: 89.999em)"
+            />
+            <source
+              srcset="./images/desktop/image-stand-out.jpg"
+              media="(min-width: 90em)"
+            />
+            <img src="./images/mobile/image-stand-out.jpg" alt="" />
+          </picture>
+        </div>
+      </div>
+    </main>
+
+    <article id="article-about" class="article-about">
+      <!-- THIRD PAIR -->
+      <div class="des-box graphic-des-box">
+        <div class="box container flow flex-col-al-c">
+          <h2 class="ff-serif fs-400 text-green-dark">Graphic Design</h2>
+          <p class="text-green-dark text-container">
+            Great design makes you memorable. We deliver artwork that
+            underscores your brand message and captures potential clients’
+            attention.
+          </p>
+        </div>
+      </div>
+
+      <div class="des-box photography-des-box">
+        <div class="box container flow flex-col-al-c">
+          <h2 class="ff-serif text-blue-dark">Photography</h2>
+          <p class="text-blue-dark text-container">
+            Increase your credibility by getting the most stunning, high-quality
+            photos that improve your business image.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article
+      id="client-testimonials"
+      class="flex flex-gap--lrg container client-testimonials"
+    >
+      <h2 class="ff-serif fs-200 letter-spacing-1 text-gray--light uppercase">
+        Client testimonials
+      </h2>
+
+      <div class="flex client-testimonials-flex flex-gap--lrg">
+        <div class="flow flow--sm flex-col-al-c flex-gap">
+          <img
+            class="client__image"
+            src="./images/image-emily.jpg"
+            alt="happy client"
+          />
+          <p class="text-gray text-container">
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
+          <div class="client__info">
+            <p class="ff-serif">Emily R.</p>
+            <p class="text-gray--light">Marketing Director</p>
+          </div>
+        </div>
+
+        <div class="flow flow--sm flex-col-al-c flex-gap">
+          <img
+            class="client__image"
+            src="./images/image-thomas.jpg"
+            alt="happy client"
+          />
+          <p class="text-gray text-container">
+            Sunnyside’s enthusiasm coupled with their keen interest in our
+            brand’s success made it a satisfying and enjoyable experience.
+          </p>
+          <div class="client__info">
+            <p class="ff-serif">Thomas S.</p>
+            <p class="text-gray--light">Chief Operating Officer</p>
+          </div>
+        </div>
+
+        <div class="flow flow--sm flex-col-al-c flex-gap">
+          <img
+            class="client__image"
+            src="./images/image-jennie.jpg"
+            alt="happy client"
+          />
+          <p class="text-gray text-container">
+            Incredible end result! Our sales increased over 400% when we worked
+            with Sunnyside. Highly recommended!
+          </p>
+          <div class="client__info">
+            <p class="ff-serif">Jennie F.</p>
+            <p class="text-gray--light">Business Owner</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!--               -->
+    <!-- IMAGE GALLERY -->
+    <!--TODO label          -->
+    <section id="image-gallery" class="image-gallery">
+      <!-- first pic -->
+      <picture>
+        <source
+          srcset="./images/mobile/image-gallery-milkbottles.jpg"
+          media="(max-width: 89.999em)"
+        />
+        <source
+          srcset="./images/desktop/image-gallery-milkbottles.jpg"
+          media="(min-width: 90em)"
+        />
+        <img src="./images/mobile/image-gallery-milkbottles.jpg" alt="" />
+      </picture>
+      <!-- second pic -->
+      <picture>
+        <source
+          srcset="./images/mobile/image-gallery-orange.jpg"
+          media="(max-width: 89.999em)"
+        />
+        <source
+          srcset="./images/desktop/image-gallery-orange.jpg"
+          media="(min-width: 90em)"
+        />
+        <img src="./images/mobile/image-gallery-orange.jpg" alt="" />
+      </picture>
+      <!-- third pic -->
+      <picture>
+        <source
+          srcset="./images/mobile/image-gallery-cone.jpg"
+          media="(max-width: 89.999em)"
+        />
+        <source
+          srcset="./images/desktop/image-gallery-cone.jpg"
+          media="(min-width: 90em)"
+        />
+        <img src="./images/mobile/image-gallery-cone.jpg" alt="" />
+      </picture>
+      <!-- forth pic -->
+      <picture>
+        <source
+          srcset="./images/mobile/image-gallery-sugar-cubes.jpg"
+          media="(max-width: 89.999em)"
+        />
+        <source
+          srcset="./images/desktop/image-gallery-sugar-cubes.jpg"
+          media="(min-width: 90em)"
+        />
+        <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="" />
+      </picture>
+    </section>
+
+    <!--         -->
+    <!-- FOOTER  -->
+    <!--         -->
+    <footer
+      class="bg-green container flow flex-col-al-c flex-gap--sm"
+      id="footer-nav"
+    >
+      <!-- LOGO -->
+      <div class="logo">
+        <img
+          src="./images/logo.svg"
+          alt="sunnyside site logo"
+          class="svg-green-filter"
+        />
+      </div>
+
+      <!-- footer NAVIGATION -->
+      <nav class="flow">
+        <ul class="flex flex-row just-spev">
+          <li>
+            <a href="#" class="fs-200 text-green-med">About</a>
+          </li>
+          <li>
+            <a href="#" class="fs-200 text-green-med">Services</a>
+          </li>
+          <li>
+            <a href="#" class="fs-200 text-green-med">Projects</a>
+          </li>
+        </ul>
+
+        <!-- SOCIAL MEDIA -->
+        <ul class="flex flex-row just-cen flex-gap--m p-top-b">
+          <li>
+            <a href="#">
+              <img src="./images/icon-facebook.svg" alt="Facebook icon link" />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/icon-instagram.svg" alt="instagram icon link"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/icon-twitter.svg" alt="twitter icon link"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/icon-pinterest.svg" alt="pinterest icon link"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>

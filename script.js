@@ -1,7 +1,7 @@
 const menuBtn = document.querySelector(".mobile-nav-toggle");
 const menuSpan = document.querySelector(".mobile-nav-toggle__span");
 const primNav = document.getElementById("primary-navigation");
-const navDecoration = document.querySelector(".nav-deco");
+const navDecoration = document.querySelector(".nav-deco-control");
 
 menuBtn.addEventListener("click", () => {
   const visible = primNav.getAttribute("data-visible");
@@ -11,12 +11,14 @@ menuBtn.addEventListener("click", () => {
   // console.log(visible === "false");
   if (visible === "false") {
     primNav.setAttribute("data-visible", "true");
+    primNav.setAttribute("aria-hidden", "false");
     navDecoration.setAttribute("data-visible", "true");
     console.log(navDecoration.getAttribute("data-visible"));
     // console.log(menuSpan.ariaExpanded);
     menuSpan.ariaExpanded = "true";
   } else {
     primNav.setAttribute("data-visible", "false");
+    primNav.setAttribute("aria-hidden", "true");
     navDecoration.setAttribute("data-visible", "false");
     // console.log(menuSpan.ariaExpanded);
     console.log(navDecoration.getAttribute("data-visible"));
