@@ -37,10 +37,22 @@ Users should be able to:
 - You can't change color of an svg used in an img tag with the color attribute in CSS, but You can make a filter for it. It's really easy as you can use a site like the one I used: https://codepen.io/sosuke/pen/Pjoqqp
 
 ```css
+/*prettier-ignore */
 .custom-filter {
-  filter: brightness(0) saturate(100%) invert(48%) sepia(56%) saturate(305%) hue-rotate(
-      118deg
-    )
-    brightness(72%) contrast(94%);
+  filter: 
+  /* first make into black */
+  brightness(0) saturate(100%) 
+  /* now make it the color you want */
+  invert(48%) sepia(56%) saturate(305%) hue-rotate(118deg) brightness(72%) contrast(94%);
 }
 ```
+
+- If there are more than 1 navigations you need to give them aria-labels
+
+```html
+<nav aria-label="Primary navigation">...</nav>
+```
+
+- An article is not a landmark in it self so it needs to be put into one
+
+- Don't put the word "link" into the alt description of imgs in links, otherwise a screen reader will read (example:) "Facebook link link"
