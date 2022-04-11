@@ -420,6 +420,26 @@ html {
   background-color: hsl(41, 100%, 50%);
 }
 
+/* SKIP LINK */
+.skip-link {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem 2rem;
+  border: 2px solid black;
+  background-color: hsl(var(--clr-white));
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0%);
+}
+
 /* NAVIGATION */
 .primary-navigation {
   display: inline-block;
@@ -556,20 +576,19 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .graphic-des-box {
   background-image: url(./images/mobile/image-graphic-design.jpg);
   background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .photography-des-box {
   background-image: url(./images/mobile/image-photography.jpg);
   background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 /*CLIENT TESTIMONIALS*/
@@ -624,6 +643,7 @@ html {
 
   .primary-navigation a {
     color: hsl(var(--clr-white));
+    /* color: hsl(var(--clr-dark)); */
   }
 
   .btn-primary {
@@ -634,6 +654,17 @@ html {
   .btn-primary:hover,
   .btn-primary:focus-visible {
     background-color: hsl(var(--clr-yellow-main));
+  }
+
+  /* ARTICLE ABOUT */
+  .graphic-des-box {
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    background-position: center center;
+  }
+
+  .photography-des-box {
+    background-image: url(./images/desktop/image-photography.jpg);
+    background-position: center center;
   }
 }
 
@@ -682,14 +713,6 @@ html {
 
   .article-about .des-box {
     width: 50%;
-  }
-
-  .graphic-des-box {
-    background-position: center center;
-  }
-
-  .photography-des-box {
-    background-position: center center;
   }
 
   /* CLIENT TESIMTONIALS */

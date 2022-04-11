@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Design company specialized in photography and graphic design"
+    />
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,19 +17,21 @@
       rel="stylesheet"
     />
 
+    <!-- ICON -->
+    <link rel="icon" href="./images/favicon-32x32.png" />
+
     <!-- CSS -->
     <link rel="stylesheet" href="design.css" />
 
     <!-- JS -->
     <script defer src="./script.js"></script>
 
-    <title>DESIGN FILE</title>
+    <title>Sunnyside</title>
   </head>
   <body>
-    <!--TODO HERE PUT SKIP TO CONTENT -->
-    <!-- <div class="nav-deco"></div> -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
     <header class="bg-blue">
-      <!-- <div class="flex-media"> -->
       <!-- LOGO -->
       <div class="flex flex-row container p-top-m just-spbt">
         <div class="logo">
@@ -58,7 +64,6 @@
             <li>
               <a href="#" class="text-gray--med fs-200">Projects</a>
             </li>
-            <!--TODO special button -->
             <li>
               <a
                 href="#"
@@ -69,7 +74,6 @@
           </ul>
         </nav>
       </div>
-      <!-- </div> -->
     </header>
 
     <!--      -->
@@ -105,11 +109,11 @@
           <picture>
             <source
               srcset="./images/mobile/image-transform.jpg"
-              media="(max-width: 89.999em)"
+              media="(max-width: 62.499em)"
             />
             <source
               srcset="./images/desktop/image-transform.jpg"
-              media="(min-width: 90em)"
+              media="(min-width: 62.5em)"
             />
             <!-- Decorative images: Provide a null text alternative (alt="") when the only purpose of an image is to add visual decoration to the page, rather than to convey information that is important to understanding the page. -->
             <img src="./images/mobile/image-transform.jpg" alt="" />
@@ -133,11 +137,11 @@
           <picture>
             <source
               srcset="./images/mobile/image-stand-out.jpg"
-              media="(max-width: 89.999em)"
+              media="(max-width: 62.499em)"
             />
             <source
               srcset="./images/desktop/image-stand-out.jpg"
-              media="(min-width: 90em)"
+              media="(min-width: 62.5em)"
             />
             <img src="./images/mobile/image-stand-out.jpg" alt="" />
           </picture>
@@ -230,17 +234,21 @@
 
     <!--               -->
     <!-- IMAGE GALLERY -->
-    <!--TODO label          -->
-    <section id="image-gallery" class="image-gallery">
+    <!--               -->
+    <section
+      id="image-gallery"
+      class="image-gallery"
+      aria-label="image gallery"
+    >
       <!-- first pic -->
       <picture>
         <source
           srcset="./images/mobile/image-gallery-milkbottles.jpg"
-          media="(max-width: 89.999em)"
+          media="(max-width: 62.499em)"
         />
         <source
           srcset="./images/desktop/image-gallery-milkbottles.jpg"
-          media="(min-width: 90em)"
+          media="(min-width: 62.5em)"
         />
         <img src="./images/mobile/image-gallery-milkbottles.jpg" alt="" />
       </picture>
@@ -248,11 +256,11 @@
       <picture>
         <source
           srcset="./images/mobile/image-gallery-orange.jpg"
-          media="(max-width: 89.999em)"
+          media="(max-width: 62.499em)"
         />
         <source
           srcset="./images/desktop/image-gallery-orange.jpg"
-          media="(min-width: 90em)"
+          media="(min-width: 62.5em)"
         />
         <img src="./images/mobile/image-gallery-orange.jpg" alt="" />
       </picture>
@@ -260,11 +268,11 @@
       <picture>
         <source
           srcset="./images/mobile/image-gallery-cone.jpg"
-          media="(max-width: 89.999em)"
+          media="(max-width: 62.499em)"
         />
         <source
           srcset="./images/desktop/image-gallery-cone.jpg"
-          media="(min-width: 90em)"
+          media="(min-width: 62.5em)"
         />
         <img src="./images/mobile/image-gallery-cone.jpg" alt="" />
       </picture>
@@ -272,11 +280,11 @@
       <picture>
         <source
           srcset="./images/mobile/image-gallery-sugar-cubes.jpg"
-          media="(max-width: 89.999em)"
+          media="(max-width: 62.499em)"
         />
         <source
           srcset="./images/desktop/image-gallery-sugar-cubes.jpg"
-          media="(min-width: 90em)"
+          media="(min-width: 62.5em)"
         />
         <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="" />
       </picture>
