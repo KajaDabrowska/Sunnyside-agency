@@ -395,8 +395,10 @@ html {
   width: 105%;
   border-radius: 10px;
   background-color: var(--underline-color, red);
-  opacity: 0.3;
+  opacity: var(--opac, 0.3);
   bottom: -5%;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(var(--transX, 0%));
 }
 
 .underline-link--yellow {
@@ -405,6 +407,12 @@ html {
 
 .underline-link--pink {
   --underline-color: hsl(var(--clr-pink-main));
+}
+
+.underline-link:hover {
+  --opac: 0.5;
+  --transX: 4%;
+  transform: scale(0.98);
 }
 
 .btn-primary {
@@ -455,6 +463,7 @@ html {
 
 @media (max-width: 62.499em) {
   .mobile-nav-toggle {
+    cursor: pointer;
     display: inline-block;
     position: absolute;
     right: 2rem;
@@ -466,6 +475,11 @@ html {
     background-image: url(./images/icon-hamburger.svg);
     background-size: cover;
     background-color: transparent;
+    transition: transform 0.1s ease-in-out;
+  }
+
+  .mobile-nav-toggle:hover {
+    transform: scale(0.96);
   }
 
   .primary-navigation {
@@ -616,6 +630,15 @@ html {
 .svg-green-filter {
   filter: brightness(0) saturate(100%) invert(48%) sepia(56%) saturate(305%)
     hue-rotate(118deg) brightness(72%) contrast(94%);
+}
+
+.footer-navigation a:hover {
+  color: hsl(var(--clr-dark-green));
+}
+
+.footer-navigation img:hover {
+  filter: brightness(0) saturate(100%) invert(24%) sepia(14%) saturate(1338%)
+    hue-rotate(117deg) brightness(96%) contrast(93%);
 }
 
 @media (min-width: 62.5em) {
