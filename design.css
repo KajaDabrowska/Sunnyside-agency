@@ -649,6 +649,7 @@ html {
 
   .primary-navigation {
     display: inline-block;
+    opacity: 1;
     background-color: transparent;
 
     display: flex;
