@@ -56,3 +56,20 @@ Users should be able to:
 - An article is not a landmark in it self so it needs to be put into one
 
 - Don't put the word "link" into the alt description of imgs in links, otherwise a screen reader will read (example:) "Facebook link link"
+
+- Although you can't transition the display property you can create an animation for it (so for example you can change from display: none in a smooth fashion)
+
+```css
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+    transform: translateX(1000%);
+  }
+  100% {
+    display: inline-block;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+```
